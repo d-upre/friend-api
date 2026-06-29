@@ -18,6 +18,8 @@ local function HandlePlayer(Player)
 			return
 		end
 
+		repeat task.wait() until Players:FindFirstChild(Target.Name)
+
 		Log[Player][Target] = Player:GetFriendStatus(Target)
 	end)
 
